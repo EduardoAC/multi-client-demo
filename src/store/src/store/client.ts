@@ -26,7 +26,7 @@ import type {
   UpdatePetWithFormParams,
   UploadFileParams,
   User,
-} from '../../model';
+} from './model';
 
 export const getSwaggerPetstoreOpenAPI30 = () => {
   /**

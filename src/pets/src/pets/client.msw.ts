@@ -17,7 +17,7 @@ import { faker } from '@faker-js/faker';
 import { HttpResponse, delay, http } from 'msw';
 import type { RequestHandlerOptions } from 'msw';
 
-import type { ApiResponse, GetInventory200, Order, Pet, User } from '../../model';
+import type { ApiResponse, GetInventory200, Order, Pet, User } from './model';
 
 export const getUpdatePetResponseMock = (overrideResponse: Partial<Pet> = {}): Pet => ({
   id: faker.helpers.arrayElement([faker.number.int({ min: undefined, max: undefined }), undefined]),
