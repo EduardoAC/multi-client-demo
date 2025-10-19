@@ -6,13 +6,17 @@ export default defineConfig({
       "target": "https://petstore3.swagger.io/api/v3/openapi.json"
     },
     "output": {
-      "target": "./src/pets/client.ts",
-      "workspace": "./src/pets",
-      "schemas": "model",
+      "target": "src/pets/client.ts",
+      "workspace": "src/pets",
+      "schemas": "src/pets/model",
       "mode": "split",
       "client": "react-query",
+      "httpClient": "axios",
       "baseUrl": "https://api.pets.local",
-      "mock": true,
+      "mock": {
+        "type": "msw",
+        "useExamples": true
+      },
       "prettier": true,
       "clean": true
     }
@@ -22,11 +26,12 @@ export default defineConfig({
       "target": "https://petstore3.swagger.io/api/v3/openapi.json"
     },
     "output": {
-      "target": "./src/store/client.ts",
-      "workspace": "./src/store",
-      "schemas": "model",
+      "target": "src/store/client.ts",
+      "workspace": "src/store",
+      "schemas": "src/store/model",
       "mode": "split",
       "client": "axios",
+      "httpClient": "axios",
       "baseUrl": "https://api.store.local",
       "mock": false,
       "prettier": true,

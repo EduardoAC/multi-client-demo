@@ -42,7 +42,7 @@ import type {
   UpdatePetWithFormParams,
   UploadFileParams,
   User,
-} from '../../model';
+} from './model';
 
 /**
  * Update an existing pet by Id.
